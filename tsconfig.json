@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "removeComments": true,
+    "allowJs": true,
+    "noImplicitUseStrict": true,
+    "target": "ES5"
+  }
+}
