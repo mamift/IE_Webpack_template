@@ -1,6 +1,11 @@
 call npm install -g @types/jquery@^3.2.12
 call npm install -g awesome-typescript-loader@^3.2.1
 call npm install -g browserify@^14.4.0
+call npm install -g babel-core@^6.26.0
+call npm install -g babel-loader@^7.1.2
+call npm install -g babel-preset-env@^1.6.0
+call npm install -g babel-preset-es2015@^6.24.1
+call npm install -g babel-preset-es2015-loose@^8.0.0
 call npm install -g css-loader@^0.28.4
 call npm install -g extract-text-webpack-plugin@^2.1.2
 call npm install -g gulp@^3.9.1
