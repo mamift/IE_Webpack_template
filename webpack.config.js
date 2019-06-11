@@ -25,7 +25,7 @@ module.exports = {
     modules: [windowsGlobalNodeModules]
   },
   resolveLoader: {
-    modules: [windowsGlobalNodeModules]
+    modules: [windowsGlobalNodeModules, '.\\node_modules']
   },
   // Source maps support ('inline-source-map' also works)
   devtool: 'source-map',
