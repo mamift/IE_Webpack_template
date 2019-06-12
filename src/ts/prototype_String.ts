@@ -2,7 +2,7 @@
 interface String {
   isNullorEmptyOrWhitespace(): boolean
   caseInsensitiveCompare(otherString: string): boolean
-  format(): string
+  format(...strings: string[]): string
   contains(theString: string): boolean,
   parseFirstIntFromString(): number
 }
