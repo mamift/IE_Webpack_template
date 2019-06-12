@@ -4,14 +4,18 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 /** https://github.com/webpack-contrib/uglifyjs-webpack-plugin */
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
+var os = require('os')
+
 var extractSass = new ExtractTextPlugin({
   filename: './dist/styles.css'
   // filename: '[name].[contenthash].css'
   // disable: process.env.NODE_ENV === 'development'
 })
 
-var windowsGlobalNodeModules = process.env.HOME + '\\AppData\\Roaming\\npm\\node_modules'
-console.info('Resolving global modules from: ' + windowsGlobalNodeModules)
+var windowsNpmGlobalModules = os.homedir() + '\\AppData\\Roaming\\npm\\node_modules'
+var windowsYarnGlobalModules = os.homedir() + '\\AppData\\Local\\Yarn\\Data\\global\\node_modules'
+console.info('Resolving NPM global modules from: ' + windowsNpmGlobalModules)
+console.info('Resolving Yarn global modules from: ' + windowsYarnGlobalModules)
 
 module.exports = {
   entry: [
@@ -22,10 +26,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: [windowsGlobalNodeModules]
+    modules: [windowsNpmGlobalModules, windowsYarnGlobalModules, '.\\node_modules']
   },
   resolveLoader: {
-    modules: [windowsGlobalNodeModules, '.\\node_modules']
+    modules: [windowsNpmGlobalModules, windowsYarnGlobalModules, '.\\node_modules']
   },
   // Source maps support ('inline-source-map' also works)
   devtool: 'source-map',
@@ -35,7 +39,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loaders: ['babel-loader', 'ts-loader'],
-        exclude: [/node_modules/, windowsGlobalNodeModules]
+        exclude: [/node_modules/, windowsNpmGlobalModules, windowsYarnGlobalModules]
       },
       {
        test: /\.scss$/,
