@@ -7,4 +7,8 @@ import './ts/prototype_Function'
 import './ts/prototype_String'
 import './ts/keyboardShortcuts'
 
+var ws = "".isNullorEmptyOrWhitespace()
+
+console.log(ws)
+
 // loadScript('https://use.fontawesome.com/aef4b5f8fc.js')
