@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"exclude_folder_patterns": ["node_modules"]
+		}
+	]
+}
