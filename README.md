@@ -1,5 +1,5 @@
-# IE 11 Web pack template
-This is a barebones, very basic, IE 11 compatible Web pack template. It provides:
+# IE 9,10,11 Web pack template
+This is a barebones, very basic, IE 9 to 11 compatible Web pack template. It provides:
 * A Typescript 2.4 compiler (and preset `tsconfig.json`) and compatible webpack loader.
 * A SASS (SCSS) compiler and webpack css loader (by default outputs the compiled CSS into a separate CSS file).
 * Javascript uglify, minification and debug sourcemap output.
