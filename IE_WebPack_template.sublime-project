@@ -3,7 +3,7 @@
 	[
 		{
 			"path": ".",
-			"exclude_folder_patterns": ["node_modules"]
+			"folder_exclude_patterns": ["node_modules"]
 		}
 	]
 }
