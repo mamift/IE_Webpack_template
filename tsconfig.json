@@ -4,6 +4,8 @@
     "removeComments": true,
     "allowJs": true,
     "noImplicitUseStrict": true,
-    "target": "ES5"
+    "target": "ES5",
+    "jsx": "react",
+    "jsxFactory": "DOMcreateElement"
   }
 }
