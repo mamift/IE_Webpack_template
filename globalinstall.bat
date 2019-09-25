@@ -23,3 +23,4 @@ call yarn global add vinyl-buffer@^1.0.0
 call yarn global add vinyl-source-stream@^1.1.0
 call yarn global add watchify@^3.9.0
 call yarn global add webpack@^3.0.0
+call yarn global add url-loader@^1.1.0
