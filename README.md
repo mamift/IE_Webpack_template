@@ -10,12 +10,14 @@ This is a barebones, very basic, IE 9 to 11 compatible Web pack template. It pro
 
 ## Instructions
 
-Requires Node.js 8+
+The instructions here are for configuring a machine with at least Windwos 7, and requires at least Node.js v8. All the `package.json` dependencies and versions should also work with this version of Node.js. It has been tested on Windows 7 and Windows 10 (1607).
 
 1. Clone the repo,
 2. Run `yarn install` to install modules locally or `globalInstall.bat` to install dependencies globally,
-3. Change whatever else suits you, (you can use `npm` instead of `yarn` for instance in `package.config`)
-4. Then execute `yarn run watch`.
+    * For global module resolution, you need to add a `%NODE_PATH%` **user** environment variable that points to the npm's or yarn's global node_modules cache (or both). For npm this is usually: `%appdata%\npm\node_modules` and for yarn this is `%userprofile%\AppData\Local\Yarn\Data\global\node_modules`.
+    * NOTE: Enter either `%appdata%\npm\node_modules` or `%userprofile%\AppData\Local\Yarn\Data\global\node_modules` into the address bar of an Explorer window and it should resolve to the actual directory; it's the actual directory value that should be the value or values set for the `%NODE_PATH%` environment variable.
+4. Change whatever else suits you, (you can use `npm` instead of `yarn` for instance in `package.config`)
+5. Then execute `yarn run watch`.
 
 There is no: 
 * Separate development or production configuration (you can write that yourself by copying the `webpack.config.js` and adding respective build command in `package.json`)
